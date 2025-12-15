@@ -2,8 +2,18 @@ import React from 'react'
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { FiFigma } from "react-icons/fi";
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+
+  const navigate = useNavigate()
+
+  const navigateAbout =()=>{
+   setTimeout(()=>{
+
+     navigate('/about')
+   },1500)
+  }
   return (
     <>
    
@@ -12,7 +22,7 @@ const Footer = () => {
 
         {/* ABOUT */}
         <div>
-          <h3 className="text-sm opacity-80    tracking-wide mb-4">
+          <h3 onClick={navigateAbout} className="text-sm opacity-80  cursor-pointer   tracking-wide mb-4">
             About Me
           </h3>
           <p className="text-sm leading-relaxed max-w-xs">

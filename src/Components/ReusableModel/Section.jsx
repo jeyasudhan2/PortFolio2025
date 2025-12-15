@@ -33,7 +33,7 @@ export const Section = ({ title, items }) => {
         {title}
       </h2>
       
-      <div className="flex flex-wrap gap-6">
+      <div className="flex  flex-wrap  gap-2">
         {items.map((item, idx) => (
           <SkillLabel key={idx} name={item.name} level={item.level} />
         ))}

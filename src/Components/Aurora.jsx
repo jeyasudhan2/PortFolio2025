@@ -201,7 +201,7 @@ export default function Aurora(props) {
 
   return (
     
-  <div ref={ctnDom} className="w-[90%] h-screen  aurora-container  "/>
+  <div ref={ctnDom} />
 
  
   
