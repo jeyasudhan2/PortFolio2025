@@ -1,0 +1,232 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.aurora-container {
+  width: 100%;
+  height: 100%;
+}
+.typing {
+  width: fit-content;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #000;
+  animation: typing 3s steps(30), blink .7s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0% { border-color: transparent }
+}
+
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.Blinking{
+      animation: blink2 3s linear infinite ;
+  }
+
+   @keyframes blink2 {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+  
+ .Thunder{
+  clip-path: polygon(41.61% 0%, 47.77% 0%, 59.49% 0%, 47.77% 33.92%, 55.05% 36.44%, 55.05% 36.44%, 47.4% 67.45%, 39.75% 98.47%, 44.16% 44.38%, 31.88% 38.95%);
+
+ }
+
+ .model-card {
+
+
+  color: white;
+  position: relative;
+  overflow: hidden;
+ 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Shining sweep */
+.model-card:hover:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.537) 70%,
+    rgba(255, 255, 255, 0.136) 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(25deg);
+  }
+}
+
+
+@keyframes loopScroll {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  
+  animation: loopScroll 20s linear infinite;
+}
+
+
+
+
+.text-pop-up-right {
+	-webkit-animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-right 1s  cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.text-pop-up-right-delay2 {
+    -webkit-animation: text-pop-up-right  1s     cubic-bezier(0.250, 0.460, 0.450, 0.940)   both;
+  -webkit-animation-delay:300ms; 
+          animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         animation-delay:300ms; 
+          
+}
+.text-pop-up-right-delay3{
+	-webkit-animation: text-pop-up-right  1s     cubic-bezier(0.250, 0.460, 0.450, 0.940)   both;
+  -webkit-animation-delay:500ms; 
+	        animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         animation-delay:500ms; 
+
+}
+.text-pop-up-right-delay4{
+	-webkit-animation: text-pop-up-right  1s     cubic-bezier(0.250, 0.460, 0.450, 0.940)   both;
+  -webkit-animation-delay:700ms; 
+	        animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         animation-delay:700ms; 
+
+}
+
+
+@-webkit-keyframes text-pop-up-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+    opacity: 0;
+   
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            opacity: 1;
+       
+  }
+}
+@keyframes text-pop-up-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+    opacity: 0;
+    
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            opacity: 1;
+              
+   
+  }
+}
+
+
+.text-outline {
+  -webkit-text-stroke: 2px #ffffff;
+  color: transparent;
+  
+}
+
+
+.draw-path {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: draw 3s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.clip1{
+clip-path: polygon(25% 25%, 25% 0%, 73.75% 0%, 75% 75%, 72.29% 90.67%, 65.95% 95.91%, 61.02% 99.99%, 50.83% 99.99%, 40.65% 99.99%, 28.73% 90.67%, 25.85% 75.82%);
+
+}
+
+.path-animate {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-path 4s ease-out forwards;
+}
+
+@keyframes draw-path {
+  to {
+    stroke-dashoffset: 0;
+    
+  }
+}
