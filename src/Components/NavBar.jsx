@@ -49,7 +49,7 @@ const NavBar = () => {
               About
             </Link>
             <Link className="not-hover:opacity-80" to="/skill">
-              Skill && Tools
+              Skill & Tools
             </Link>
             <Link className="not-hover:opacity-80" to="/">
               Experience

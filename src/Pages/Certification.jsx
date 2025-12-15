@@ -47,7 +47,7 @@ const Certification = () => {
           {certifications.map((certificate, idx) => (
             <div
            
-              className="bg-transparent  text-xs md:text-sm lg:text-[16px] overflow-hidden hover:shadow-[0_0_5px_1px_#fc29fc,0_0_7px_2px_#fc29fc] backdrop-blur-xl  hover:scale-105 transition duration-150  border-2 border-[#550655] sm:w-110 sm:h-40   lg:w-[25%] lg:h-100 md:w-110  md:h-50 flex flex-col justify-evenly  rounded-[15px]   px-4 py-5  z-50    "
+              className="bg-transparent  text-xs md:text-sm lg:text-[16px] overflow-hidden hover:shadow-[0_0_5px_1px_#fc29fc,0_0_7px_2px_#fc29fc] backdrop-blur-xl  hover:scale-105 transition duration-150  border-2 border-[#550655] sm:w-110 sm:h-40   lg:w-[25%] lg:h-100 md:w-110  md:h-50 flex flex-col justify-evenly  rounded-[15px]   px-4 py-5      "
               key={idx}
             >
               <h1 className="boldonse-regular">About:<span className=" text-[#fc29fc]">{certificate.name}</span></h1>
