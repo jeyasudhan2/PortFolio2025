@@ -114,27 +114,27 @@
 
 
 .text-pop-up-right {
-	-webkit-animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-pop-up-right 1s  cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-pop-up-right 1s  cubic-bezier(0.00,0.80,0.00,1.01) both;
+	        animation: text-pop-up-right 1s   cubic-bezier(0.00,0.80,0.00,1.01) both;
 }
 .text-pop-up-right-delay2 {
-    -webkit-animation: text-pop-up-right  1s     cubic-bezier(0.250, 0.460, 0.450, 0.940)   both;
+    -webkit-animation: text-pop-up-right  1s  cubic-bezier(0.00,0.80,0.00,1.01)  both;
   -webkit-animation-delay:300ms; 
           animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
          animation-delay:300ms; 
           
 }
 .text-pop-up-right-delay3{
-	-webkit-animation: text-pop-up-right  1s     cubic-bezier(0.250, 0.460, 0.450, 0.940)   both;
+	-webkit-animation: text-pop-up-right  1s     cubic-bezier(0.00,0.80,0.00,1.01)   both;
   -webkit-animation-delay:500ms; 
-	        animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-right 1s  cubic-bezier(0.00,0.80,0.00,1.01) both;
          animation-delay:500ms; 
 
 }
 .text-pop-up-right-delay4{
-	-webkit-animation: text-pop-up-right  1s     cubic-bezier(0.250, 0.460, 0.450, 0.940)   both;
+	-webkit-animation: text-pop-up-right  1s      cubic-bezier(0.00,0.80,0.00,1.01)   both;
   -webkit-animation-delay:700ms; 
-	        animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-right 1s  cubic-bezier(0.00,0.80,0.00,1.01) both;
          animation-delay:700ms; 
 
 }

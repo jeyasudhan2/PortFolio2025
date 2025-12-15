@@ -52,11 +52,11 @@ const About = ({ SocialMedia }) => {
                 About
               </h1>
 
-              <p className="boldonse-regular text-xl lg:text-3xl mt-6 leading-13 text-pop-up-right-delay2">
+              <p className="boldonse-regular text-xl lg:text-[28px] mt-6 leading-13 text-pop-up-right-delay2">
                 SoftWare Engineer & <br /> MERN Stack Developer
               </p>
 
-              <p className="mt-6 poppins-medium opacity-80 text-[12px] lg:text-lg  text-pop-up-right-delay3">
+              <p className="mt-6 poppins-medium opacity-80 text-[12px] lg:text-[1rem]  text-pop-up-right-delay3">
                 I’m{' '}
                 <span className="font-extralight  bg-[#BF40BF] ">
                   Jeya Sudhan R
