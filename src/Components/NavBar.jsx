@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FaGithubAlt } from "react-icons/fa";
 import { LiaKeyboardSolid } from "react-icons/lia";
 import { SiSlashdot } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { Themecontext } from "../Hook/ThemeContext";
 
 const NavBar = () => {
+  const { theme, setTheme } =useContext(Themecontext)
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const NavBar = () => {
         scrolled
           ? "bg-[#801da17a] backdrop-blur-xl"
           : "bg-[#130b19] border-none"
-      } w-full px-5 sticky top-0 z-50 border-b-2 border-b-[#ffffff4d] h-15 flex justify-center items-center mb-2`}
+      } w-full px-5 sticky top-0 z-50 border-b-2 border-b-[#ffffff4d] ${theme == "Dark"? `bg-[#130b19] text-white  `: ` bg-white text-[#130b19]  `} h-15 flex justify-center items-center mb-2`}
     >
 
       <nav className="flex justify-between items-center w-full h-full mt-2">
@@ -70,10 +72,11 @@ const NavBar = () => {
           <div className="text-[12px] gap-3 flex items-center poppins-medium bg-[#801da17a] px-3 py-1 rounded">
             Quick access
             <span
-              className="w-[17px] h-6 flex items-center justify-center
-              border border-b-3 border-white font-mono rounded
-              bg-white/5 text-white font-semibold text-sm"
-            >
+              className={`w-[17px] h-6 flex items-center justify-center
+              border-2 border-b-3 font-mono rounded
+              bg-white/5  font-semibold text-sm
+               ${theme == "Dark"?` border-white text-white `:`border-black text-black `}
+              `}>
               Q
             </span>
           </div>

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Aurora from '../Components/Aurora'
 import { JeyasudhnaResume } from '../assets'
+import { Themecontext } from '../Hook/ThemeContext'
 
 const About = ({ SocialMedia }) => {
+
+  const { theme, setTheme } =useContext(Themecontext)
   const items = [
     { Name: '#web developer' },
     { Name: '#frontend developer' },
@@ -79,14 +82,14 @@ const About = ({ SocialMedia }) => {
             {/* RIGHT SECTION (CLIP1 / THUNDER) */}
             {/* HIDDEN ON SMALL & MEDIUM */}
             <div className="relative basis-6/12 hidden lg:block">
-              <h1 className="absolute top-50 right-50 z-50 text-5xl boldonse-regular backdrop-blur-xl p-6 rounded-2xl">
+              <h1 className={`absolute top-50 right-50 z-50 text-5xl ${theme == "Dark"? ` text-white `:  ` shadow-2xl bg-white text-yellow-300`} boldonse-regular backdrop-blur-xl p-6 rounded-2xl`}>
                 THUNDER
                 <span className="flex justify-center gap-4 mt-7">
                   {SocialMedia.map((item, idx) => (
                     <a
                       key={idx}
                       href={item.link}
-                      className="hover:-translate-y-1 text-3xl transition duration-100 text-white/50 hover:text-[#fffdff]"
+                      className={`hover:-translate-y-1 text-3xl transition duration-100 ${theme == "Dark"? `bg-[#130b19]   text-white/50 hover:text-[#fffdff] `: ` bg-white text-black/60  hover:text-[#130b19] `} `}
                     >
                       {item.platform}
                     </a>

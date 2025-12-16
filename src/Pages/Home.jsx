@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Aurora from "../Components/Aurora";
 import { FaGithub } from "react-icons/fa";
@@ -10,8 +10,10 @@ import { FaArrowPointer } from "react-icons/fa6";
 import NavBar from "../Components/NavBar";
 import ProfileSvg from "../Components/ReusableModel/ProfileSvg";
 import { OgImg } from "../assets";
+import { Themecontext } from "../Hook/ThemeContext";
 
 const Home = ({ SocialMedia }) => {
+  const { theme, setTheme } = useContext(Themecontext)
   const [done, setDone] = useState(false);
 
   useEffect(() => {
@@ -20,15 +22,15 @@ const Home = ({ SocialMedia }) => {
 
   return (
     <>
-      <div className="w-[90%] flex gap-3.5 justify-between items-center h-screen">
+      <div className={`w-[90%] flex gap-3.5 justify-between items-center h-screen ${theme == "Dark"? `bg-[#130b19] text-white `: ` bg-white text-[#130b19]`}`}>
         {/* LEFT CONTENT */}
         <section className="flex flex-col gap-8 items-baseline justify-center text-left min-h-screen px-4">
           <h1 className=" text-3xl lg:text-5xl boldonse-regular text-pop-up-right">
             <span className="text-purple-500">I'm </span>{" "}
-            <span className="px-3 text-white/80">Jeya Sudhan,</span>
+            <span className={`px-3  ${theme == "Dark"? `bg-[#130b19] text-white/60 `: ` bg-white text-[#130b19] `}`}>Jeya Sudhan,</span>
           </h1>
 
-          <p className="text-sm lg:text-md capitalize poppins-medium text-white/60 opacity-90 max-w-xl text-pop-up-right-delay2">
+          <p className={`text-sm lg:text-md capitalize poppins-medium ${theme == "Dark"? `bg-[#130b19] text-white `: ` bg-white text-[#130b19]`}opacity-90 max-w-xl text-pop-up-right-delay2`}>
             I'm a passionate Full-Stack Developer specializing in the MERN Stack
             and Python. I love building dynamic, responsive web applications and
             solving complex problems with clean, efficient code. Constantly
@@ -44,7 +46,7 @@ const Home = ({ SocialMedia }) => {
               </span>
             </button>
 
-            <button className="bg-transparent border-2 font-bold rounded-2xl py-3 px-7 hover:shadow-[0_0_5px_1px_white] border-white text-white transition duration-300">
+            <button className={`bg-transparent border-2 font-bold rounded-2xl py-3 px-7 hover:shadow-[0_0_5px_1px_white] ${theme == "Dark"? `bg-[#130b19] text-white  border-white `: ` bg-white border-[#130b19] border-2  text-[#130b19]`} transition duration-300`}>
               Get in Touch
             </button>
           </div>
@@ -54,7 +56,7 @@ const Home = ({ SocialMedia }) => {
               <a
                 key={idx}
                 href={item.link}
-                className="hover:-translate-y-1 text-3xl transition duration-100 text-white/50 hover:text-[#ffffff]"
+                className={`hover:-translate-y-1 text-3xl transition duration-100 ${theme == "Dark"?` text-white/50 hover:text-[#ffffff] `:` text-black/60 hover:text-[#3b234b]`} `}
               >
                 {item.platform}
               </a>
