@@ -40,7 +40,7 @@ const App = () => {
 ];
   return (
     <>
-    <div className='w-full text-white min-h-screen flex flex-col justify-center items-center scroll-smooth bg-[#130b19]'>
+    <div className='w-full text-white min-h-screen scroll-smooth bg-[#130b19]'>
 
     
 <BrowserRouter>

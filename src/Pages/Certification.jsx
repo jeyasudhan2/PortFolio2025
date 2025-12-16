@@ -31,7 +31,7 @@ const Certification = () => {
   ];
 
   return (
-    <div className=" w-[90%] min-h-screen   ">
+    <div className=" w-[90%] pl-5 min-h-screen   ">
       <section className="relative  ">
         <h1 className="  text-pop-up-right boldonse-regular text-3xl text-[#BF40BF]  mt-6 -ml-10  lg:mt-15 lg:ml-30">
           Certification
