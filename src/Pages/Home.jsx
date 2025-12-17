@@ -27,7 +27,7 @@ const Home = ({ SocialMedia }) => {
         <section className="flex flex-col gap-8 items-baseline justify-center text-left min-h-screen px-4">
           <h1 className=" text-3xl lg:text-5xl boldonse-regular text-pop-up-right">
             <span className="text-purple-500">I'm </span>{" "}
-            <span className={`px-3  ${theme == "Dark"? `bg-[#130b19] text-white/60 `: ` bg-white text-[#130b19] `}`}>Jeya Sudhan,</span>
+            <span className={`px-3  ${theme == "Dark"? ` text-white/80 `: ` text-[#130b19] `}`}>Jeya Sudhan,</span>
           </h1>
 
           <p className={`text-sm lg:text-md capitalize poppins-medium ${theme == "Dark"? `bg-[#130b19] text-white `: ` bg-white text-[#130b19]`}opacity-90 max-w-xl text-pop-up-right-delay2`}>

@@ -19,7 +19,7 @@ import { Themecontext } from "./Hook/ThemeContext";
 const App = () => {
 
   const { theme, setTheme }=useContext(Themecontext)
-  console.log(theme)
+
   const socialMediaLinks = [
     {
       platform: <FaLinkedin />,

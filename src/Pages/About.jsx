@@ -89,7 +89,7 @@ const About = ({ SocialMedia }) => {
                     <a
                       key={idx}
                       href={item.link}
-                      className={`hover:-translate-y-1 text-3xl transition duration-100 ${theme == "Dark"? `bg-[#130b19]   text-white/50 hover:text-[#fffdff] `: ` bg-white text-black/60  hover:text-[#130b19] `} `}
+                      className={`hover:-translate-y-1 text-3xl transition duration-100 ${theme == "Dark"? `  text-white/50 hover:text-[#fffdff] `: ` bg-white text-black/60  hover:text-[#130b19] `} `}
                     >
                       {item.platform}
                     </a>

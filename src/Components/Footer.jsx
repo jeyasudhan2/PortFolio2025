@@ -51,7 +51,7 @@ const Footer = () => {
             <Link to="/"  className={`${theme == "Dark"? `bg-[#130b19] hover:text-white  `: ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}>Contact</Link>
             <Link to="/"   className={`${theme == "Dark"? `bg-[#130b19] hover:text-white  `: ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}>Experience</Link>
           
-            <Link to="/skill"   className={`${theme == "Dark"? `bg-[#130b19] hover:text-white  `: ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}>Skills and Tools</Link>
+            <Link to="/skill#professionalToolKit"     className={`${theme == "Dark"? `bg-[#130b19] hover:text-white  `: ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}>Skills and Tools</Link>
     
           </ul>
         </div>

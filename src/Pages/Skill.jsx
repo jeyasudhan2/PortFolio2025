@@ -1,5 +1,6 @@
 import React from "react";
 import { Section } from "../Components/ReusableModel/Section";
+import { useEffect  } from "react";
 import {
   Cssimg,
   Djangoimg,
@@ -12,8 +13,21 @@ import {
   Reactimg,
   Tailwindimg,
 } from "../assets";
+import { useLocation } from "react-router-dom";
 
 const Skill = () => {
+
+   const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      element?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [location]);
   const tools = [
     { src: Reactimg, name: "React" },
     { src: Tailwindimg, name: "Tailwind" },
@@ -29,7 +43,7 @@ const Skill = () => {
 
   return (
     <div className="w-[90%] min-h-screen overflow-hidden">
-      <h1 className="boldonse-regular text-2xl lg:text-4xl mt-15 lg:ml-30 text-[#BF40BF] text-pop-up-right">
+      <h1 id="professionalToolKit" className="boldonse-regular text-2xl lg:text-4xl mt-15 lg:ml-30 text-[#BF40BF] text-pop-up-right">
         Professional Toolkit
       </h1>
 
