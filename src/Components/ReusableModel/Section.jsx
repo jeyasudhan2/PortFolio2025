@@ -24,12 +24,13 @@ export const SkillLabel = ({ name, level }) => {
 };
 
 export const Section = ({ title, items }) => {
+  const { theme, setTheme } = useContext(Themecontext)
   return (
     <div className="mb-10 text-pop-up-right-delay4">
 
-      <h2 className=" -ml-15 group text-2xl font-semibold text-white mb-4 poppins-medium ">
+      <h2 className={` -ml-15 group text-2xl font-semibold${theme == "Dark"? ` text-white/80 `: ` text-[#130b19] `} mb-4 poppins-medium `}>
 
-        <span className="opacity-0 group-hover:opacity-100 italic  mr-7  text-[#ffffff] bg-[#e102d63d] px-1.5 rounded transition">
+        <span className={`opacity-0 group-hover:opacity-100 italic  mr-7  ${theme == "Dark"? ` text-white/80 `: ` text-[#130b19] `} bg-[#e102d63d] px-1.5 rounded transition`}>
 
           #
         </span>

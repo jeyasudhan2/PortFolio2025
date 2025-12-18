@@ -14,6 +14,7 @@ import {
   Tailwindimg,
 } from "../assets";
 import { useLocation } from "react-router-dom";
+import Saitama from "../Components/ReusableModel/Saitama";
 
 const Skill = () => {
 
@@ -42,7 +43,13 @@ const Skill = () => {
   ];
 
   return (
-    <div className="w-[90%] min-h-screen overflow-hidden">
+    <>
+<Saitama/>
+    <div className="w-[90%] min-h-screen overflow-hidden relative lg:-top-50 lg:z-40">
+
+
+
+
       <h1 id="professionalToolKit" className="boldonse-regular text-2xl lg:text-4xl mt-15 lg:ml-30 text-[#BF40BF] text-pop-up-right">
         Professional Toolkit
       </h1>
@@ -108,6 +115,7 @@ const Skill = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

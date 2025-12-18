@@ -18,7 +18,7 @@ import { Themecontext } from "./Hook/ThemeContext";
 
 const App = () => {
 
-  const { theme, setTheme }=useContext(Themecontext)
+  const { theme }=useContext(Themecontext)
 
   const socialMediaLinks = [
     {
@@ -63,6 +63,7 @@ const App = () => {
 
             <Footer />
           </BrowserRouter>
+          
    
       </div>
     </>

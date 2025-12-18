@@ -52,7 +52,7 @@ const NavBar = () => {
                 Projects
               </Link>
               <Link
-                className="bg-[#cc00ff74] py-2 px-3 rounded-md not-hover:opacity-80"
+                className="bg-[#cc00ff74] py-2 px-3 rounded-2xl not-hover:opacity-80"
                 to="/certificate-blogs"
               >
                 Certificate-Blogs
@@ -81,12 +81,12 @@ const NavBar = () => {
             {/* QUICK ACCESS */}
             <button
               onClick={() => setIsOpen(true)}
-              className="text-[12px] gap-3 flex items-center poppins-medium bg-[#801da17a] px-3 py-1 rounded"
+              className="text-[12px] gap-3 flex items-center poppins-medium bg-[#801da17a] px-5 py-1 rounded-xl"
             >
               Quick access
               <span
                 className={`w-[17px] h-6 flex items-center justify-center
-              border-2 border-b-3 font-mono rounded
+              border-1 p-2 border-b-3 font-mono rounded
               bg-white/5  font-semibold text-sm
                ${
                  theme == "Dark"
