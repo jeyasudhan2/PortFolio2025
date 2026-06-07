@@ -1,24 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Section } from "../Components/ReusableModel/Section";
-import { useEffect  } from "react";
-import {
-  Cssimg,
-  Djangoimg,
-  Htmlimg,
-  JavaScriptImg,
-  MaterialUIimg,
-  MongoDBimg,
-  NodeJsImg,
-  Pythonimg,
-  Reactimg,
-  Tailwindimg,
-} from "../assets";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Saitama from "../Components/ReusableModel/Saitama";
+import TableOfContents from "../Components/ReusableModel/TableOfContents";
+import { techStack } from "../utils/techStack.data";
 
 const Skill = () => {
-
-   const location = useLocation();
+  const [active, setActive] = useState("false");
+  const location = useLocation();
+  console.log(location.hash);
 
   useEffect(() => {
     if (location.hash) {
@@ -29,55 +19,57 @@ const Skill = () => {
       });
     }
   }, [location]);
-  const tools = [
-    { src: Reactimg, name: "React" },
-    { src: Tailwindimg, name: "Tailwind" },
-    { src: JavaScriptImg, name: "JavaScript" },
-    { src: NodeJsImg, name: "Node.js" },
-    { src: Pythonimg, name: "Python" },
-    { src: MongoDBimg, name: "Mongodb" },
-    { src: Htmlimg, name: "Html" },
-    { src: Cssimg, name: "CSS" },
-    { src: MaterialUIimg, name: "Material Ui" },
-    { src: Djangoimg, name: "Django" },
-  ];
 
   return (
-    <>
-<Saitama/>
-    <div className="w-[90%] min-h-screen overflow-hidden relative lg:-top-50 lg:z-40">
+    <div className="w-[90%] min-h-screen overflow-hidden relative space-y-15 plus-jakarta   lg:z-40">
+      <div className="font-bold text-2xl lg:text-5xl mt-15    text-pop-up-right-delay2">
+        <h1 className="font-bold text-2xl lg:text-3xl mt-15   text-[#BF40BF] ">
+          Skills
+        </h1>
+        <h1
+          id="professionalToolKit"
+          className=" font-bold text-2xl lg:text-5xl "
+        >
+          Professional Toolkit
+        </h1>
+      </div>
 
-
-
-
-      <h1 id="professionalToolKit" className="boldonse-regular text-2xl lg:text-4xl mt-15 lg:ml-30 text-[#BF40BF] text-pop-up-right">
-        Professional Toolkit
-      </h1>
-
-      <section className="flex flex-col items-center justify-evenly gap-20">
-
-        {/* TOOLS ANIMATION (HIDDEN) */}
-        <div className="hidden lg:inline-flex gap-5 mt-20 py-7 px-7 animate-scroll backdrop-blur-2xl">
-          {tools.concat(tools).map((tool, index) => (
-            <div key={index} className="flex w-15 h-15 brightness-130">
-              <img
-                src={tool.src}
-                alt={tool.name}
-                className="bg-transparent object-contain hover:scale-110 transition-transform"
-              />
-            </div>
-          ))}
+      <section className="flex relative flex-col items-center  justify-center gap-20">
+        <div className="hidden lg:block lg:w-4/12">
+          <div className="absolute z-10 top-24">
+            <TableOfContents>
+              <p className=" text-[12px] text-[#bfadc7]   pt-2 px-3">
+                Front-End Developer
+              </p>
+              <div className="py-2   text-[11.3px]">
+                {techStack.map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => setActive(item)}
+                    className={`w-full text-left px-7 py-1 transition ${
+                      active == item
+                        ? "text-purple-400 bg-white/5"
+                        : "text-white/70 hover:bg-white/10"
+                    }`}
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            </TableOfContents>
+          </div>
         </div>
 
-        <div className="flex flex-col items-baseline">
-          <div className="mb-4 flex flex-col gap-3">
-            <h1 className=" text-2xl lg:text-4xl poppins-bold text-pop-up-right-delay2">
+        <div className="flex flex-col items-start   justify-baseline border-l space-y-10  border-l-amber-50/10 px-20 ml-35  ">
+          <div className="   flex flex-col  gap-3">
+            <h1 className="   -translate-x-20 text-xl lg:text-4xl font-bold plus-jakarta   text-pop-up-right-delay3">
               Detail and Summary
             </h1>
-            <p className="w-[70%] font-light text-pop-up-right-delay3">
+            <p className="w-[70%] -translate-x-20  text-balance text-white/60 font-light text-pop-up-right-delay4">
               I represent all data in labels to make it easier to read. The
               underline indicator shows how often I used the related item, e.g.:
             </p>
+            <div className="w-10/12  h-px bg-white/5 mt-5" />
           </div>
 
           <Section
@@ -112,10 +104,10 @@ const Skill = () => {
               { name: "Git", level: 4 },
             ]}
           />
+          <div className="w-10/12 h-px bg-white/5 mt-5" />
         </div>
       </section>
     </div>
-    </>
   );
 };
 

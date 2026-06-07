@@ -1,11 +1,22 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+.jetbrains-mono {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+}
 
+.background-grid-fade {
+  background-color: #130b19;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
+}
 
-.boldonse-regular {
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
+.plus-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
 }
 
@@ -13,58 +24,67 @@
   width: 100%;
   height: 100%;
 }
-.typing {
-  width: fit-content;
 
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 4px solid #000;
-  animation: typing 3s steps(30), blink .7s infinite step-end alternate;
+.scroller {
+  scrollbar-color: #9a949c #2d2430;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track (background) */
+.scroller::-webkit-scrollbar-track {
+  background-color: #2d2430;
+}
+
+/* Thumb (the moving part) */
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #2d2430;
+  border-radius: 10px;
+}
+
+/* Hover effect (optional 🔥) */
+.scroller::-webkit-scrollbar-thumb:hover {
+  background-color: #9a949c;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  0% { border-color: transparent }
-}
-
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  
-}
-
-.Blinking{
-      animation: blink2 3s linear infinite ;
+  0% {
+    border-color: transparent;
   }
+}
 
-   @keyframes blink2 {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
+.Blinking {
+  animation: blink2 3s linear infinite;
+}
+
+@keyframes blink2 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
   }
-  
- .Thunder{
-  clip-path: polygon(41.61% 0%, 47.77% 0%, 59.49% 0%, 47.77% 33.92%, 55.05% 36.44%, 55.05% 36.44%, 47.4% 67.45%, 39.75% 98.47%, 44.16% 44.38%, 31.88% 38.95%);
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
 
- }
-
- .model-card {
-
-
+.model-card {
   color: white;
   position: relative;
   overflow: hidden;
- 
+
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -95,7 +115,6 @@
   }
 }
 
-
 @keyframes loopScroll {
   0% {
     transform: translateX(50%);
@@ -106,87 +125,97 @@
 }
 
 .animate-scroll {
-  
   animation: loopScroll 20s linear infinite;
 }
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
-
+.wiggle {
+  display: inline-block;
+  animation: wiggle 1s ease-in-out forwards;
+}
 
 .text-pop-up-right {
-	-webkit-animation: text-pop-up-right 1s  cubic-bezier(0.00,0.80,0.00,1.01) both;
-	        animation: text-pop-up-right 1s   cubic-bezier(0.00,0.80,0.00,1.01) both;
+  -webkit-animation: text-pop-up-right 2s cubic-bezier(0, 0.8, 0, 1.01) both;
+  animation: text-pop-up-right 2s cubic-bezier(0, 0.8, 0, 1.01) both;
 }
 .text-pop-up-right-delay2 {
-    -webkit-animation: text-pop-up-right  1s  cubic-bezier(0.00,0.80,0.00,1.01)  both;
-  -webkit-animation-delay:300ms; 
-          animation: text-pop-up-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-         animation-delay:300ms; 
-          
+  -webkit-animation: text-pop-up-right 1.5s cubic-bezier(0, 0.8, 0, 1.01) both;
+  -webkit-animation-delay: 300ms;
+  animation: text-pop-up-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 300ms;
 }
-.text-pop-up-right-delay3{
-	-webkit-animation: text-pop-up-right  1s     cubic-bezier(0.00,0.80,0.00,1.01)   both;
-  -webkit-animation-delay:500ms; 
-	        animation: text-pop-up-right 1s  cubic-bezier(0.00,0.80,0.00,1.01) both;
-         animation-delay:500ms; 
-
+.text-pop-up-right-delay3 {
+  -webkit-animation: text-pop-up-right 1.5s cubic-bezier(0, 0.8, 0, 1.01) both;
+  -webkit-animation-delay: 500ms;
+  animation: text-pop-up-right 1.5s cubic-bezier(0, 0.8, 0, 1.01) both;
+  animation-delay: 500ms;
 }
-.text-pop-up-right-delay4{
-	-webkit-animation: text-pop-up-right  1s      cubic-bezier(0.00,0.80,0.00,1.01)   both;
-  -webkit-animation-delay:700ms; 
-	        animation: text-pop-up-right 1s  cubic-bezier(0.00,0.80,0.00,1.01) both;
-         animation-delay:700ms; 
-
+.text-pop-up-right-delay4 {
+  -webkit-animation: text-pop-up-right 1.5s cubic-bezier(0, 0.8, 0, 1.01) both;
+  -webkit-animation-delay: 700ms;
+  animation: text-pop-up-right 1.5s cubic-bezier(0, 0.8, 0, 1.01) both;
+  animation-delay: 700ms;
 }
-
 
 @-webkit-keyframes text-pop-up-right {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     text-shadow: none;
     opacity: 0;
-   
   }
   100% {
     -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    transform: translateX(50px);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            opacity: 1;
-       
+    transform-origin: 50% 50%;
+    opacity: 1;
   }
 }
 @keyframes text-pop-up-right {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     text-shadow: none;
     opacity: 0;
-    
   }
   100% {
     -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    transform: translateX(50px);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            opacity: 1;
-              
-   
+    transform-origin: 50% 50%;
+    opacity: 1;
   }
 }
-
 
 .text-outline {
   -webkit-text-stroke: 2px #ffffff;
   color: transparent;
-  
 }
-
 
 .draw-path {
   stroke-dasharray: 1500;
@@ -200,7 +229,6 @@
   }
 }
 
-
 .poppins-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -213,22 +241,37 @@
   font-style: normal;
 }
 
-.clip1{
-clip-path: polygon(25% 25%, 25% 0%, 73.75% 0%, 75% 75%, 72.29% 90.67%, 65.95% 95.91%, 61.02% 99.99%, 50.83% 99.99%, 40.65% 99.99%, 28.73% 90.67%, 25.85% 75.82%);
-
+.clip1 {
+  clip-path: polygon(
+    25% 25%,
+    25% 0%,
+    73.75% 0%,
+    75% 75%,
+    72.29% 90.67%,
+    65.95% 95.91%,
+    61.02% 99.99%,
+    50.83% 99.99%,
+    40.65% 99.99%,
+    28.73% 90.67%,
+    25.85% 75.82%
+  );
 }
 
 .path-animate {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw-path 4s ease-out forwards;
+  animation: draw-path 2s ease-out forwards;
 }
+
+/* .box{
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: red;
+  corner-shape: superellipse(1);
+} */
 
 @keyframes draw-path {
   to {
     stroke-dashoffset: 0;
-    
   }
 }
-
-

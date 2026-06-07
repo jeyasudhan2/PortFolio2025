@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Certification from "./Pages/Certification";
 import Skill from "./Pages/Skill";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
-import Aurora from "./Components/Aurora";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -15,10 +13,13 @@ import { FaArrowPointer } from "react-icons/fa6";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ThemeContext from "./Hook/ThemeContext";
 import { Themecontext } from "./Hook/ThemeContext";
+import Services from "./Pages/Services";
+import Experience from "./Pages/Experience";
+import Blogs from "./Pages/Blogs";
+import Outlet from "./layout/Outlet";
 
 const App = () => {
-
-  const { theme }=useContext(Themecontext)
+  const { theme } = useContext(Themecontext);
 
   const socialMediaLinks = [
     {
@@ -43,30 +44,22 @@ const App = () => {
     },
   ];
   return (
-    <>
-      <div className={`w-full  min-h-screen lg:flex flex-col lg:justify-center lg:items-center scroll-smooth ${theme == "Dark"? `bg-[#130b19] text-white `: `bg-[#ffffff] text-[#130b19]`} `}>
-    
-          <BrowserRouter>
-            <NavBar />
-            <Routes>
-              <Route
-                path="/"
-                element={<Home SocialMedia={socialMediaLinks} />}
-              />
-              <Route
-                path="/about"
-                element={<About SocialMedia={socialMediaLinks} />}
-              />
-              <Route path="/skill" element={<Skill />} />
-              <Route path="/certificate-blogs" element={<Certification />} />
-            </Routes>
-
-            <Footer />
-          </BrowserRouter>
-          
-   
-      </div>
-    </>
+    <div
+      className={`w-full   min-h-screen lg:flex flex-col background-grid-fade lg:justify-center lg:items-center scroll-smooth ${theme == "Dark" ? `bg-[#130b19] text-white ` : `bg-[#ffffff] text-[#130b19]`} `}
+    >
+      <BrowserRouter>
+        <Outlet>
+          <Routes>
+            <Route path="/" element={<Home SocialMedia={socialMediaLinks} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skill" element={<Skill />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
+        </Outlet>
+      </BrowserRouter>
+    </div>
   );
 };
 
