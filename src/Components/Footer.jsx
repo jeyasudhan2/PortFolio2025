@@ -76,7 +76,7 @@ const Footer = () => {
               Contact
             </Link>
             <Link
-              to="/"
+              to="/experience"
               className={`${theme == "Dark" ? `bg-[#130b19] hover:text-white  ` : ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}
             >
               Experience
@@ -101,7 +101,13 @@ const Footer = () => {
             >
               Blog • W.I.L
             </Link>
-            <Link className={` ${active?" not-hover:opacity-80":"opacity-35 cursor-not-allowed "} flex items-center gap-1 `} disabled={true} to={`${active?"/services":"/"}`}>
+            <Link
+              to="/projects"
+              className={`${theme == "Dark" ? `bg-[#130b19] hover:text-white  ` : ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}
+            >
+              Project
+            </Link>
+            <Link className={` ${theme == "Dark" ? `bg-[#130b19] hover:text-white  ` : ` bg-white text-black/60 hover:text-[#130b19] `} ${active?" not-hover:opacity-80":"opacity-35 cursor-not-allowed "} flex items-center gap-1 `} disabled={true} to={`${active?"/services":"/"}`}>
               Services <span> <CiLock/></span>
             </Link>
           </ul>

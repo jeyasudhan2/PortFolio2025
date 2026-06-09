@@ -17,6 +17,7 @@ import Services from "./Pages/Services";
 import Experience from "./Pages/Experience";
 import Blogs from "./Pages/Blogs";
 import Outlet from "./layout/Outlet";
+import Project from "./Pages/Project";
 
 const App = () => {
   const { theme } = useContext(Themecontext);
@@ -55,6 +56,7 @@ const App = () => {
             <Route path="/skill" element={<Skill />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/project" element={<Project/>}/>
             <Route path="/experience" element={<Experience />} />
           </Routes>
         </Outlet>

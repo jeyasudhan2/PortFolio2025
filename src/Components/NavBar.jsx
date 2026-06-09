@@ -45,7 +45,7 @@ const NavBar = () => {
 
           {/* LINKS → HIDDEN ON SM & MD */}
           <div className="hidden text-[11.5px]  lg:flex items-center gap-3.5">
-            <Link className="not-hover:opacity-80" to="/">
+            <Link className="not-hover:opacity-80" to="/project">
               Projects
             </Link>
             <Link
