@@ -10,7 +10,7 @@ import { Themecontext } from "../Hook/ThemeContext";
 const NavBar = () => {
   const { theme, setIsOpen } = useContext(Themecontext);
   const [scrolled, setScrolled] = useState(false);
-  const [active,setActive] =useState(true)
+  const [active,setActive] =useState(false)
 
   useEffect(() => {
     const handleScroll = () => {

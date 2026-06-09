@@ -53,8 +53,8 @@ function Tag({ label }) {
 export default function Services() {
   const isAavilabe = false;
   return (
-    <div className="min-h-screen plus-jakarta  text-white font-body px-6 py-10">
-      <div className="max-w-3xl mx-auto">
+    <div className="min-h-screen plus-jakarta  text-white font-body px-2 py-10">
+      <div className="max-w-3xl mx-30">
         {/* ── Header ── */}
         <div className="flex justify-between items-end mb-10 gap-4">
           <div>
