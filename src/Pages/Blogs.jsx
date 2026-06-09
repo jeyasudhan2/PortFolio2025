@@ -5,9 +5,9 @@ import { CodeBlock } from "../Components/ReusableModel/CodeBlock ";
 
 const Blogs = () => {
   return (
-    <div className=" w-[90%] pl-5 min-h-screen plus-jakarta  ">
+    <div className=" w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen plus-jakarta  ">
       <section className="relative  ">
-        <h1 className="  text-pop-up-right font-bold     text-5xl text-[#BF40BF]  mt-6 -ml-10  lg:mt-15 ">
+        <h1 className="  text-pop-up-right font-bold  w-full  lg:text-5xl md:text-4xl  text-3xl text-[#BF40BF]  mt-6 -ml-9  lg:mt-15 ">
           Blogs • What I Learn
         </h1>
 
@@ -31,10 +31,10 @@ const Blogs = () => {
               className=" backdrop-blur-lg text-white/70 absolute top-2/7 "
             />
           </div>
-          <div className="   lg:col-span-2 grid place-items-start gap-4 ">
+          <div className="  lg:col-span-2 grid place-items-start gap-4 ">
             {blogs.map((content, idx) => (
               <div key={idx}>
-                <h1 className=" font-bold text-[24px] ">{content.name}</h1>
+                <h1 className=" font-bold text-xl sm:text-2xl lg:text-3xl  ">{content.name}</h1>
                 <p className="text-[14px] text-balance text-white/50 lowercase py-2  ">
                   {content.description}
                 </p>

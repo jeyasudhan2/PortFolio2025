@@ -15,7 +15,7 @@ export const CodeBlock = ({ code }) => {
   };
 
   return (
-    <div className="relative bg-[#2c292d33]  p-2 rounded-xl">
+    <div className="relative bg-[#2c292d33] w-3xs  lg:w-full p-2 rounded-xl">
       {/* Copy Button */}
       <button
         onClick={handleCopy}

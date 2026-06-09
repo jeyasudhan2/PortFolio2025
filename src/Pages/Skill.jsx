@@ -62,10 +62,10 @@ const Skill = () => {
 
         <div className="flex flex-col items-start   justify-baseline border-l space-y-10  border-l-amber-50/10 px-20 ml-35  ">
           <div className="   flex flex-col  gap-3">
-            <h1 className="   -translate-x-20 text-xl lg:text-4xl font-bold plus-jakarta   text-pop-up-right-delay3">
+            <h1 className="   -translate-x-10 lg:-translate-x-20 text-xl sm:text-2xl lg:text-4xl font-bold plus-jakarta text-pop-up-right-delay3">
               Detail and Summary
             </h1>
-            <p className="w-[70%] -translate-x-20  text-balance text-white/60 font-light text-pop-up-right-delay4">
+            <p className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] -translate-x-10 lg:-translate-x-20 text-white/60 font-light text-pop-up-right-delay4">
               I represent all data in labels to make it easier to read. The
               underline indicator shows how often I used the related item, e.g.:
             </p>

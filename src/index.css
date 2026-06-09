@@ -204,8 +204,8 @@
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(35px);
+    transform: translateX(35px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     opacity: 1;
@@ -263,12 +263,7 @@
   animation: draw-path 2s ease-out forwards;
 }
 
-/* .box{
-  border-radius: 20px;
-  border-width: 1px;
-  border-color: red;
-  corner-shape: superellipse(1);
-} */
+
 
 @keyframes draw-path {
   to {
