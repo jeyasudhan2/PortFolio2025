@@ -102,7 +102,7 @@ const Footer = () => {
               Blog • W.I.L
             </Link>
             <Link
-              to="/projects"
+              to="/project"
               className={`${theme == "Dark" ? `bg-[#130b19] hover:text-white  ` : ` bg-white text-black/60 hover:text-[#130b19] `} cursor-pointer`}
             >
               Project
